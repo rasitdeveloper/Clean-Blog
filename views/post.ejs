@@ -1,0 +1,51 @@
+<%- include('partials/_header') -%>
+
+<body>
+
+  <%- include('partials/_navigation') -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Post Detail</h1>
+            <span class="meta"><%= post.dateCreated %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          
+
+          <h2 class="section-heading"><%= post.title %></h2>
+
+          <p><%= post.message %></p>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <%- include('partials/_footer') -%>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
