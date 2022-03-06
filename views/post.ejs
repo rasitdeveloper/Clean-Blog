@@ -29,6 +29,17 @@
           <h2 class="section-heading"><%= post.title %></h2>
 
           <p><%= post.message %></p>
+          <div style="margin-left: auto; margin-right: 0;" class="col-xl-4 col-lg-5">
+            <!-- Share box -->
+            <div class="tm-bg-gray tm-share-box">
+              <div class="text-center">
+                <a href="/post/edit/<%= post._id %>" class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Post</span></a>	
+              </div>	
+              <div class="text-center">
+                <button class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Delete Post</span></button>	
+              </div>								
+            </div>
+          </div>
 
         </div>
       </div>
