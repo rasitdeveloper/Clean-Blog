@@ -19,7 +19,9 @@ app.set("view engine", "ejs");
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method', {
+    methods:['POST', 'GET']
+}));
 
 //routes
 app.get('/', async (req,res) => {
@@ -64,6 +66,15 @@ app.put('/post/:id', async (req,res) => {
     post.message = req.body.message;
     await post.save()
     res.redirect(`/post/${req.params.id}`);
+})
+
+app.delete('/post/:id', async (req,res) => {
+    // const post = await Post.findOne({_id: req.params.id});
+    // let deletedPost = __dirname + '/public' + post.image;
+    // fs.unlinkSync(deletedPost);
+    // await Post.findByIdAndRemove(req.params.id);
+    await Post.findByIdAndRemove(req.params.id);
+    res.redirect('/');
 })
 
 
