@@ -4,7 +4,8 @@
   "description": "fahreddin rasit kilic",
   "main": "app.js",
   "scripts": {
-    "test": "fahreddin rasit kilic clean blog project"
+    "test": "fahreddin rasit kilic clean blog project",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
